@@ -9,13 +9,19 @@ body {
 }
 
 hr {
-    border-color: $theme-primary;
-    border-width: 3px;
-    max-width: 50px;
+    border: 0;
+    max-width: 200px;
+    height: 3px;
+    background-image: linear-gradient(-90deg, #ff99ff, #01ffff);
+    background-image: -webkit-linear-gradient(-90deg, #ff99ff, #01ffff); /* For Safari 5.1 to 6.0 */
+    background-image: -o-linear-gradient(-90deg, #ff99ff, #01ffff); /* For Opera 11.1 to 12.0 */
+    background-image: -moz-linear-gradient(-90deg, #ff99ff, #01ffff); /* For Firefox 3.6 to 15 */
+    background-image: linear-gradient(-90deg, #ff99ff, #01ffff); /* Standard syntax */
 }
 
 hr.light {
-    border-color: white;
+  height: 1px;
+  background-image: linear-gradient(-90deg, white, white);
 }
 
 a {
@@ -43,7 +49,7 @@ p {
 
 .bg-dark {
     background-color: $theme-dark;
-    color: white;
+    // color: white;
 }
 
 .text-faded {
@@ -65,14 +71,14 @@ aside {
 // Navigation
 
 .navbar-default {
-    background-color: white;
+    background-color: #3e3e3e;
     border-color: rgba($theme-dark, .5);
     .navbar-header .navbar-brand {
-        color: $theme-primary;
+        color: $theme-dark;
         font-weight: 700;
         &:hover,
         &:focus {
-            color: darken($theme-primary, 10%);
+            color: darken($theme-dark, 10%);
         }
     }
     .nav {
@@ -83,13 +89,13 @@ aside {
                 font-size: 13px;
                 color: $theme-dark;
                 &:hover {
-                    color: $theme-primary;
+                    color: $theme-dark;
                 }
             }
             &.active {
                 > a,
                 > a:focus {
-                    color: $theme-primary !important;
+                    color: $theme-dark !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -100,37 +106,37 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: rgba(white, .3);
+        border-color: #3e3e3e;//rgba(white, .3);
         .navbar-header .navbar-brand {
-            color: rgba(white, .7);
+            color: #3e3e3e;//rgba(white, .7);
             &:hover,
             &:focus {
-                color: white;
+                color: #3e3e3e;//white;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(white, .7);
+            color: #3e3e3e;//rgba(white, .7);
             &:hover {
-                color: white;
+                color: #3e3e3e;//white;
             }
         }
         &.affix {
-            background-color: white;
+            background-color: #3e3e3e;//white;
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
-                color: $theme-primary;
+                color: $theme-dark;
                 font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: darken($theme-primary, 10%);
+                    color: darken($theme-dark, 10%);
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
                 color: $theme-dark;
                 &:hover {
-                    color: $theme-primary;
+                    color: darken($theme-dark, 10%);
                 }
             }
         }
@@ -145,9 +151,9 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.png');
     text-align: center;
-    color: white;
+    background-color: #3e3e3e;
+    color: #3e3e3e;
     .header-content {
         position: relative;
         text-align: center;
